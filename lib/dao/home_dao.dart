@@ -5,8 +5,9 @@ import 'package:demo_trip/model/home_model.dart';
 import 'package:http/http.dart' as http;
 
 // const HOME_URL = 'http://www.devio.org/io/flutter_app/json/home_page.json';
-var HOME_URL = Uri.http('localhost:4040', '/io/flutter_app/json/home_page.json');
-
+// var HOME_URL = Uri.http('localhost:4040', '/io/flutter_app/json/home_page.json');
+// ignore: non_constant_identifier_names
+var HOME_URL = Uri.http('devio.org', '/io/flutter_app/json/home_page.json');
 class HomeDao {
   static Future<HomeModel> fetch() async {
     final response = await http.get(HOME_URL);
